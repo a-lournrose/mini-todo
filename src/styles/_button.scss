@@ -1,0 +1,32 @@
+@use "styles/typography" as typo;
+
+.btn {
+  height: 44px;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+
+  &--primary {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+
+    @include typo.label;
+
+    &:hover {
+      background-color: var(--color-accent-active);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--color-foreground);
+    border-radius: var(--radius);
+    height: fit-content;
+    padding: 3px;
+    line-height: 1;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+}

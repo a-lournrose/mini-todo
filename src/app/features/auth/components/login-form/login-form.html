@@ -1,0 +1,11 @@
+<h1>С возвращением!</h1>
+<p>Войдите, чтобы вернуться к своим задачам и ничего не упустить.</p>
+
+<form class="input-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <app-input label="Имя пользователя" [control]="form.controls.username"/>
+  <app-input label="Пароль" type="password" [control]="form.controls.password"/>
+
+  <button appButton class="submit-btn">Войти</button>
+</form>
+
+<div class="footer-text">Нет аккаунта? <span class="link">Зарегистрироваться</span></div>
