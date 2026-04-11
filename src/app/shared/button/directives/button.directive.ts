@@ -7,7 +7,7 @@ type ButtonVariant = 'primary' | 'ghost';
   host: {
     '[class]': "'btn btn--' + variant()"
   },
-  standalone: true,
+  standalone: true
 })
 export class ButtonDirective {
   public readonly variant = input<ButtonVariant>('primary');

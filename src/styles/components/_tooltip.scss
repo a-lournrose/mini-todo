@@ -1,0 +1,16 @@
+@use "../base/typography" as typo;
+
+.tooltip {
+  position: fixed;
+  padding: 4px 8px;
+  background-color: var(--color-tooltip-background);
+  color: var(--color-tooltip-foreground);
+  border-radius: var(--radius);
+
+  max-width: 200px;
+  white-space: normal;
+  word-wrap: break-word;
+  pointer-events: none;
+
+  @include typo.body;
+}

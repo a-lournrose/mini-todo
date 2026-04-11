@@ -1,0 +1,13 @@
+<label class="input_container">
+  @if(label()) {
+    <div class="label">{{ label() }}</div>
+  }
+
+  <div class="input_wrapper">
+    <ng-content select="input" />
+
+    <div class="actions">
+      <ng-content select="[inputAction]"/>
+    </div>
+  </div>
+</label>

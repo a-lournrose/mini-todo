@@ -9,4 +9,8 @@
   line-height: 1;
   cursor: pointer;
   outline: none;
+
+  &:focus-visible {
+    color: var(--color-accent);
+  }
 }

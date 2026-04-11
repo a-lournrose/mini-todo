@@ -2,10 +2,18 @@
 <p>Войдите, чтобы вернуться к своим задачам и ничего не упустить.</p>
 
 <form class="input-form" [formGroup]="form" (ngSubmit)="onSubmit()">
-  <app-input label="Имя пользователя" [control]="form.controls.username"/>
-  <app-input label="Пароль" type="password" [control]="form.controls.password"/>
-
+  <app-input label="Имя пользователя"
+             [control]="form.controls.username"
+  />
+  <app-input label="Пароль"
+             [control]="form.controls.password"
+             type="password"
+  />
   <button appButton class="submit-btn">Войти</button>
 </form>
 
-<div class="footer-text">Нет аккаунта? <span class="link">Зарегистрироваться</span></div>
+<div class="footer-text">Нет аккаунта?
+  <a class="link"
+     [routerLink]="APP_ROUTES.auth.register"
+  >Зарегистрироваться</a>
+</div>

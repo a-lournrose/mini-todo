@@ -1,0 +1,41 @@
+@if(type() === "password") {
+  <app-input-wrapper [label]="label()">
+    <input appInputControl
+           [formControl]="control()"
+           [type]="type()"
+           [placeholder]="placeholder()"
+
+           #pwdToggle="passwordToggle"
+           appPasswordToggle
+
+           [appInputValidation]="errors()"
+           #validation="inputValidation"
+    />
+    @if(hasErrors()) {
+      <app-input-validation-icon inputAction
+                                 [status]="validation.status()"
+                                 [errorText]="validation.errorText()"
+      />
+    }
+    <button inputAction class="toggle-password" (click)="pwdToggle.toggle()">
+      <svg [lucideIcon]="pwdToggle.icon()" [size]="18"/>
+    </button>
+  </app-input-wrapper>
+} @else {
+  <app-input-wrapper [label]="label()">
+    <input appInputControl
+           [formControl]="control()"
+           [type]="type()"
+           [placeholder]="placeholder()"
+
+           [appInputValidation]="errors()"
+           #validation="inputValidation"
+    />
+    @if(hasErrors()) {
+      <app-input-validation-icon inputAction
+                                 [status]="validation.status()"
+                                 [errorText]="validation.errorText()"
+      />
+    }
+  </app-input-wrapper>
+}

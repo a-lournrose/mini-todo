@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LoginFormComponent } from '../../components/login-form/login-form';
 import { LoginFormValues } from '@features/auth/models/auth.models';
 
@@ -8,6 +8,7 @@ import { LoginFormValues } from '@features/auth/models/auth.models';
   styleUrl: './login-page.scss',
   standalone: true,
   imports: [LoginFormComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginPageComponent {
   protected onLogin(values: LoginFormValues): void {

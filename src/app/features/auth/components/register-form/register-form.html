@@ -1,0 +1,25 @@
+<h1>Начни продуктивно</h1>
+<p>Создайте аккаунт и организуйте свои задачи в одном месте.</p>
+
+<form class="input-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <app-input label="Имя пользователя"
+             [control]="form.controls.username"
+             [errors]="formErrors.username"
+  />
+  <app-input label="Почта"
+             [control]="form.controls.email"
+             [errors]="formErrors.email"
+  />
+  <app-input label="Пароль"
+             [control]="form.controls.password"
+             [errors]="formErrors.password"
+             type="password"
+  />
+  <button appButton class="submit-btn">Начать</button>
+</form>
+
+<div class="footer-text">Есть аккаунт?
+  <a class="link"
+     [routerLink]="APP_ROUTES.auth.login"
+  >Войти</a>
+</div>
