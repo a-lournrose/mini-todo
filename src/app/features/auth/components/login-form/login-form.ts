@@ -24,10 +24,7 @@ export class LoginFormComponent {
   });
 
   protected onSubmit(): void {
-    if (this.form.invalid) {
-      this.form.markAllAsTouched();
-      return;
-    }
+    if(!this.form.valid) return;
 
     this.submitted.emit(this.form.getRawValue());
   }

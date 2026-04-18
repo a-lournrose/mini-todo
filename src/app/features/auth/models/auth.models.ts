@@ -8,3 +8,8 @@ export interface RegisterFormValues {
   email: string;
   password: string;
 }
+
+export interface AuthTokensResponse {
+  access_token: string;
+  refresh_token: string;
+}

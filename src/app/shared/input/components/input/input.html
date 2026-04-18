@@ -10,6 +10,8 @@
 
            [appInputValidation]="errors()"
            #validation="inputValidation"
+
+           autocomplete="on"
     />
     @if(hasErrors()) {
       <app-input-validation-icon inputAction
@@ -17,7 +19,7 @@
                                  [errorText]="validation.errorText()"
       />
     }
-    <button inputAction class="toggle-password" (click)="pwdToggle.toggle()">
+    <button inputAction type="button" class="toggle-password" (click)="pwdToggle.toggle()">
       <svg [lucideIcon]="pwdToggle.icon()" [size]="18"/>
     </button>
   </app-input-wrapper>
@@ -30,6 +32,8 @@
 
            [appInputValidation]="errors()"
            #validation="inputValidation"
+
+           autocomplete="on"
     />
     @if(hasErrors()) {
       <app-input-validation-icon inputAction

@@ -3,5 +3,8 @@ export const APP_ROUTES = {
     root: '/auth',
     login: '/auth/login',
     register: '/auth/register',
+  },
+  app: {
+    root: '/app/tasks',
   }
 } as const;
