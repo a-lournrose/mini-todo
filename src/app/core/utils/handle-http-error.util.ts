@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { ToastService } from '@shared/toast/services/toast.service';
+import { ToastService } from '@shared/primitives/toast/services/toast.service';
 
 interface ErrorMessages {
   [statusCode: number]: string;

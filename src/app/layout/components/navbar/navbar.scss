@@ -1,0 +1,56 @@
+@use "../../../../styles/base/typography" as typo;
+@use "../../../../styles/base/mixins" as mix;
+
+nav {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.content__container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  @include typo.label;
+}
+
+.container__part {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.create-task__button {
+  padding: 0 12px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.avatar {
+  @include mix.button-reset;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+
+  padding: 0 12px;
+
+  &:hover {
+    background-color: var(--color-overlay);
+  }
+
+  &__username {
+    @include typo.body;
+
+    color: var(--color-foreground);
+  }
+}

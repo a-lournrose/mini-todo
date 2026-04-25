@@ -6,7 +6,7 @@ import { TokenService } from '@core/services/token.service';
 import { Router } from '@angular/router';
 import { APP_ROUTES } from '@core/constants/routes.constants';
 import { handleHttpError } from '@core/utils/handle-http-error.util';
-import { ToastService } from '@shared/toast/services/toast.service';
+import { ToastService } from '@shared/primitives/toast/services/toast.service';
 import { finalize } from 'rxjs';
 
 @Component({

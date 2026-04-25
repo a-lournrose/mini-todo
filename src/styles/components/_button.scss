@@ -6,6 +6,11 @@
   border: none;
   border-radius: var(--radius);
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
   &--primary {
     background-color: var(--color-accent);
     color: var(--color-background);
@@ -26,7 +31,7 @@
     line-height: 1;
 
     &:hover {
-      background: rgba(0, 0, 0, 0.05);
+      background: var(--color-overlay);
     }
   }
 }

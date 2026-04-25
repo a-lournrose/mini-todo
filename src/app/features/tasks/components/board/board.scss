@@ -1,0 +1,28 @@
+@use "styles/base/typography" as typo;
+@use "styles/base/mixins" as mix;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+
+  gap: 15px;
+}
+
+h2 {
+  @include typo.heading-2;
+
+  color: var(--color-foreground);
+}
+
+.board__container {
+  flex: 1;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include mix.scrollbar-hidden;
+}

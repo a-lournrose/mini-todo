@@ -1,0 +1,40 @@
+@use "../../../../../../styles/base/mixins" as mix;
+
+:host {
+  display: block;
+}
+
+.tabs__container {
+  height: 40px;
+  width: fit-content;
+  border-radius: var(--radius);
+  background-color: var(--color-secondary-background);
+  padding: 0 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tabs__item {
+  @include mix.button-reset;
+
+  padding: 7px 10px;
+  cursor: pointer;
+  border-radius: var(--radius);
+
+  &:hover {
+    background-color: var(--color-overlay);
+  }
+
+  &--active {
+    &:hover {
+      background-color: var(--color-background);
+    }
+
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.04);
+    cursor: default;
+  }
+}

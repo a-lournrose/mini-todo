@@ -9,7 +9,9 @@
 
   p {
     @include typo.label;
-    color: var(--color-secondary-foreground);
+    color: var(--color-foreground);
+
+    margin-top: 15px;
   }
 }
 

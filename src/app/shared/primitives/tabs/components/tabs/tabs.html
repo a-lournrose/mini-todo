@@ -1,0 +1,7 @@
+<div class="tabs__container">
+  @for(tab of items(); track tab.key) {
+    <button class="tabs__item" [class.tabs__item--active]="tab.key === activeTab()" (click)="selectTab(tab.key)">
+      {{ tab.title }}
+    </button>
+  }
+</div>

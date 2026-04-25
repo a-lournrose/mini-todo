@@ -1,0 +1,23 @@
+@use "styles/base/typography" as typo;
+
+:host {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+
+  min-height: 0;
+  gap: 15px;
+}
+
+.boards-view__container {
+  flex: 1;
+}
+
+.views__tab {
+  margin: 0 auto;
+}

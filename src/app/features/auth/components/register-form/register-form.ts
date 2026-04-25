@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject, output } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RegisterFormValues } from '@features/auth/models/auth.models';
-import { ButtonDirective } from '@shared/button/directives/button.directive';
+import { ButtonDirective } from '@shared/primitives/button/directives/button.directive';
 import { APP_ROUTES } from '@core/constants/routes.constants';
 import { RouterLink } from '@angular/router';
-import { InputComponent } from '@shared/input/components/input/input';
+import { InputComponent } from '@shared/primitives/input/components/input/input';
 
 @Component({
   selector: 'app-register-form',

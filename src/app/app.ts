@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ToastContainerComponent } from '@shared/toast/components/toast-container/toast-container';
+import { ToastContainerComponent } from '@shared/primitives/toast/components/toast-container/toast-container';
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,6 @@
+<span class="tag" [class]="'tag--' + color()">
+  @if(icon()) {
+    <svg [lucideIcon]="icon()!" [size]="14"/>
+  }
+  {{ text() }}
+</span>

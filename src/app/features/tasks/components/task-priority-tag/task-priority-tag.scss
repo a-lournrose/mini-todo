@@ -1,0 +1,11 @@
+@use "styles/base/typography" as typo;
+
+:host {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  span {
+    @include typo.label;
+  }
+}

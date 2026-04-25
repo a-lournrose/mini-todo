@@ -1,0 +1,51 @@
+@use "styles/base/typography" as typo;
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius);
+  border: 1px solid;
+
+  gap: 5px;
+
+  @include typo.caption;
+
+  white-space: nowrap;
+
+  &--purple {
+    color: #6366F1;
+    border-color: #6366F1;
+    background-color: rgba(99, 102, 241, 0.08);
+  }
+
+  &--blue {
+    color: #3B82F6;
+    border-color: #3B82F6;
+    background-color: rgba(59, 130, 246, 0.08);
+  }
+
+  &--green {
+    color: #22C55E;
+    border-color: #22C55E;
+    background-color: rgba(34, 197, 94, 0.08);
+  }
+
+  &--yellow {
+    color: #F59E0B;
+    border-color: #F59E0B;
+    background-color: rgba(245, 158, 11, 0.08);
+  }
+
+  &--red {
+    color: #EF4444;
+    border-color: #EF4444;
+    background-color: rgba(239, 68, 68, 0.08);
+  }
+
+  &--gray {
+    color: #9CA3AF;
+    border-color: #9CA3AF;
+    background-color: rgba(156, 163, 175, 0.08);
+  }
+}

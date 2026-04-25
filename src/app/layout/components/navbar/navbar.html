@@ -1,0 +1,21 @@
+<nav>
+  <div class="content__container">
+    <div class="container__part">
+      <button appButton class="create-task__button">
+        <svg [lucideIcon]="LucidePlusSquare" [size]="18"/>
+        Создать задачу
+      </button>
+      <div class="label">
+        Организуй работу — достигай результата.
+      </div>
+    </div>
+    <div class="container__part">
+      <button class="avatar">
+        <app-avatar username="lournrose"/>
+        <span class="avatar__username">{{ username() }}</span>
+        <svg [lucideIcon]="LucideChevronRight" [size]="18"/>
+      </button>
+      <app-logout-button/>
+    </div>
+  </div>
+</nav>

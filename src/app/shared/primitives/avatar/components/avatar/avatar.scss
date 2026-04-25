@@ -1,0 +1,18 @@
+@use "styles/base/typography" as typo;
+
+.avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: var(--color-background);
+
+    @include typo.body;
+  }
+}

@@ -1,0 +1,27 @@
+<div class="tags__container">
+  @if(item().tags && item().tags?.length) {
+    <div class="tags">
+      @for(tag of item().tags; track tag) {
+        <app-tag [text]="tag" color="blue"/>
+      }
+    </div>
+  } @else {
+    <div class="no-data__label">
+      Без тегов
+    </div>
+  }
+</div>
+<h3>Заголовок задачи какой то такой длинный и в целом очень интересный</h3>
+<div class="meta">
+  <span>
+    <svg [lucideIcon]="LucideCalendar" [size]="16"/>
+    12 апреля 2024
+  </span>
+  <div>
+    @if(item().priority) {
+      <app-task-priority-tag [key]="item().priority!"/>
+    } @else {
+      <div class="no-data__label">Без приоритета</div>
+    }
+  </div>
+</div>

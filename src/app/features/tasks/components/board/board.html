@@ -1,0 +1,7 @@
+<h2>{{ title() }}</h2>
+
+<div class="board__container">
+  @for(task of tasks(); track task.title) {
+    <app-board-task-item [item]="task"/>
+  }
+</div>
