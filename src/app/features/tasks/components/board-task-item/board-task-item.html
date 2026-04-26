@@ -11,11 +11,11 @@
     </div>
   }
 </div>
-<h3>Заголовок задачи какой то такой длинный и в целом очень интересный</h3>
+<h3>{{ item().title }}</h3>
 <div class="meta">
   <span>
     <svg [lucideIcon]="LucideCalendar" [size]="16"/>
-    12 апреля 2024
+    {{ item().createdAt | formatDate }}
   </span>
   <div>
     @if(item().priority) {

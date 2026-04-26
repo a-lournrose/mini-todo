@@ -1,3 +1,7 @@
 <app-tabs [items]="views" [activeTab]="activeView()" class="views__tab" />
 
-<app-boards-view class="boards-view__container" />
+<app-boards-view class="boards-view__container"
+                 [todoTasks]="todoTasks()"
+                 [inProgressTasks]="inProgressTasks()"
+                 [completeTasks]="completeTasks()"
+/>

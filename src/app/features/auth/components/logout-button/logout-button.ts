@@ -19,7 +19,7 @@ export class LogoutButtonComponent {
   private readonly tokenService = inject(TokenService);
   private readonly router = inject(Router);
 
-  protected logout() {
+  protected logout(): void {
     this.tokenService.clear();
     void this.router.navigate([APP_ROUTES.auth.login]);
   }

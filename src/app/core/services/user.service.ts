@@ -1,4 +1,4 @@
-import { inject, Injectable, signal } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { User } from '@core/models/user.model';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable, tap } from 'rxjs';
@@ -12,23 +12,23 @@ interface GetMeResponse {
 
 const USER_LOCAL_STORAGE_KEY = 'user';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class UserService {
   private readonly http = inject(HttpClient);
 
-  public loadCurrentUser(): Observable<User>   {
+  public loadCurrentUser(): Observable<User> {
     return this.http.get<GetMeResponse>('/users/me').pipe(
       map(this.mapUser),
       tap((user) => {
         localStorage.setItem(USER_LOCAL_STORAGE_KEY, JSON.stringify(user));
-      })
+      }),
     );
   }
 
   public getUserInfo(): User | null {
     const user = localStorage.getItem(USER_LOCAL_STORAGE_KEY);
 
-    return user ? JSON.parse(user) as User : null;
+    return user ? (JSON.parse(user) as User) : null;
   }
 
   public clear(): void {
@@ -36,13 +36,13 @@ export class UserService {
   }
 
   private mapUser(response: GetMeResponse): User {
-    const {id, username, email, created_at} = response;
+    const { id, username, email, created_at } = response;
 
     return {
       id,
       username,
       email,
       createdAt: new Date(created_at),
-    }
+    };
   }
 }

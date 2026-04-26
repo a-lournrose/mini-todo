@@ -13,6 +13,10 @@ export class TokenService {
     return localStorage.getItem(ACCESS_TOKEN_LOCAL_STORAGE_KEY);
   }
 
+  public getRefreshToken(): string | null {
+    return localStorage.getItem(REFRESH_TOKEN_LOCAL_STORAGE_KEY);
+  }
+
   public setTokens(tokens: AuthTokens): void {
     localStorage.setItem(ACCESS_TOKEN_LOCAL_STORAGE_KEY, tokens.accessToken);
     localStorage.setItem(REFRESH_TOKEN_LOCAL_STORAGE_KEY, tokens.refreshToken);

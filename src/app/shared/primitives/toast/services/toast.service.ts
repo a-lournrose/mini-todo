@@ -12,7 +12,7 @@ interface ToastMessage {
 export class ToastService {
   public readonly toasts = signal<Toast[]>([]);
 
-  private nextId: number = 0;
+  private nextId = 0;
 
   public success(message: ToastMessage): void {
     const {title, description} = message;
@@ -32,7 +32,7 @@ export class ToastService {
     this.addToast('error', title, description);
   }
 
-  public remove(id: number) {
+  public remove(id: number): void {
     this.toasts.update(toasts => toasts.filter(t => t.id !== id));
   }
 
